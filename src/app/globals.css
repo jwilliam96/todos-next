@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+/* primary */
+ --text-Active: #3a7bfd;
+ --Fondo-gradient: linear-gradient(to right,  #49b5d0, #a94bd7);
+
+ /* Light Theme */
+ --Light-fondo: hsl(236, 33%, 92%);
+ --Light-fondo-input: hsl(0, 0%, 98%);
+ --Light-text-completed: hsl(233, 11%, 84%);
+ --Ligth-text-select: hsl(234, 11%, 52%);
+ --Ligth-border: hsl(236, 9%, 61%);
+ --Light-text-input: hsla(237, 14%, 26%,);
+ 
+ /* Dark Theme */
+ --Dark-fondo: hsl(235, 21%, 11%);
+ --Dark-fondo-input: hsl(235, 24%, 19%);
+ --Dark-text-completed: hsl(233, 14%, 35%);
+ --Dark-border: hsl(235, 19%, 35%);
+ --Dark-text: hsl(234, 39%, 85%);
+ --Dark-text-hover: hsl(236, 33%, 92%);
+}
+
+.text-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-purple-500;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  clip-path: inset(0 100% 0 0);
+  animation: l5 2s steps(11) infinite;
+}
+.loader:before {
+  content:"Loading..."
+}
+@keyframes l5 {to{clip-path: inset(0 -1ch 0 0)}}
