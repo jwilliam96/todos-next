@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": " next dev ",
-    "build": " npm run prisma:deploy && next build",
+    "dev": "next dev ",
+    "build": "npm run prisma:deploy && next build",
     "start": "next start",
     "prisma:deploy": "npx prisma migrate deploy && prisma generate",
     "lint": "next lint"
